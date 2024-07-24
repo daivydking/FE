@@ -9,13 +9,13 @@ Currently, two official plugins are available:
 
 # I-Care Health Telehealth Platform
 
-![I-Care Logo](link-to-your-image)
+![E-Medatt Full Design](./src/assets/Landing%20page.png)
 
 [Live URL](link-to-your-live-site)
 
 ## Overview
 
-I-Care is a telehealth platform connecting patients with board-certified health professionals. Designed to address the challenges of accessing quality healthcare, particularly in regions like Nigeria, I-Care leverages technology to provide convenient and reliable online consultations.
+E-Medatt is a telehealth platform connecting patients with board-certified health professionals. Designed to address the challenges of accessing quality healthcare, particularly in regions like Nigeria, I-Care leverages technology to provide convenient and reliable online consultations.
 
 ## Features
 
@@ -40,3 +40,10 @@ I-Care is a telehealth platform connecting patients with board-certified health 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For more information, please contact the authors:
+
+- **Usiwo Sonia**: [usiwosonia@gmail.com](mailto:usiwosonia@gmail.com)
+- **David Chukwu**: [radchibuike@gmail.com](mailto:radchibuike@gmail.com)
