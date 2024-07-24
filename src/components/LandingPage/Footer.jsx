@@ -9,60 +9,62 @@ import googlePic from '../../assets/googleDownload 1.png';
 
 const Footer = () => {
   return (
-    <section>
-
-        <div>
-        <div>
-        <img src={Logo} alt="logo" />
-        <h1>E-MEDATT</h1>
+    <section className='w-full h-auto bg-[#5754ec] py-8 sm:py-16'>
+    <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 px-4'>
+      
+      <div className='flex flex-col items-start'>
+        <div className='flex items-center mb-8 md:mb-0'>
+          <img className='w-10 h-10' src={Logo} alt="logo" />
+          <h1 className='font-[Inter] font-bold text-2xl leading-8 text-[#ffffff]'>E-MEDATT</h1>
+        </div>
+      </div>
+  
+      <div className='flex flex-col items-start'>
+        <h3 className='font-[Inter] font-bold text-xl leading-7 text-[#ffffff] mb-4'>Our Company</h3>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">About us</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Partners</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Articles</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Contact us</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Privacy</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Terms and Conditions</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Disclaimer</a>
+      </div>
+  
+      <div className='flex flex-col items-start'>
+        <h3 className='font-[Inter] font-bold text-xl leading-7 text-[#ffffff] mb-4'>Services</h3>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Consultation</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Telehealth</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Nutrition</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Therapy</a>
+        <a className='font-[Inter] font-medium text-base leading-6 text-[#f6f6f6] mb-2' href="#">Health and Fitness</a>
+      </div>
+  
+      <div className='flex flex-col items-start'>
+        <h3 className='font-[Inter] font-bold text-xl leading-7 text-[#ffffff] mb-4'>Our Socials</h3>
+        <div className='flex space-x-4 mb-4'>
+          <a className='w-6 h-6' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src={FB} alt="facebook logo" /></a>
+          <a className='w-6 h-6' href="https://twitter.com" target="_blank" rel="noopener noreferrer"><img src={Twitter} alt="twitter logo" /></a>
+          <a className='w-6 h-6' href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src={IG} alt="instagram logo" /></a>
+          <a className='w-6 h-6' href="https://youtube.com" target="_blank" rel="noopener noreferrer"><img src={YT} alt="youtube logo" /></a>
         </div>
 
-        <div>
-            <h3>Our Company</h3>
-            <a href="#">About us</a>
-            <a href="#">Partners</a>
-            <a href="#">Articles</a>
-            <a href="#">Contact us</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms and Conditions</a>
-            <a href="#">Disclaimer</a>
+        <div className='flex space-x-4'>
+          <a className='w-24 h-12' href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+            <img src={googlePic} alt="google"/>
+          </a>
+          <a className='w-24 h-12' href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+            <img src={applePic} alt="apple" />
+          </a>
         </div>
-
-        <div>
-            <h3>Services</h3>
-            <a href="#">Consultation</a>
-            <a href="#">Telehealth</a>
-            <a href="#">Nutrition</a>
-            <a href="#">Therapy</a>
-            <a href="#">Health and Fitness</a>
-        </div>
-
-        <div>
-            <h3>Our Socials</h3>
-
-            <div>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src={FB} alt="facebook logo" /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><img src={Twitter} alt="twitter logo" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><img src={IG} alt="instagram logo" /></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><img src={YT} alt="youtube logo" /></a>
-            </div>
-        </div>
-
-        <div>
-        <a className='w-[70%] h-[60px] lg:w-full lg:h-full' href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-          <img src={googlePic} alt="google"/>
-        </a>
-        <a className='w-[70%] h-[60px] lg:w-full lg:h-full' href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-          <img src={applePic} alt="apple" />
-        </a>
-        </div>
-        </div>
-
-        <div>
-            <p>Copyright © Emedatt 2024</p>
-        </div>
-     
-    </section>
+      </div>      
+  
+    </div>
+  
+    <div className='w-full text-center mt-8'>
+      <p className='font-[Inter] font-normal text-sm leading-tight text-[#ffffff] tracking-minus-1'>Copyright © Emedatt 2024</p>
+    </div>
+  </section>
+  
   )
 }
 

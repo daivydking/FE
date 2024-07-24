@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      letterSpacing: {
+        'minus-1': '-0.01em',
+      },
     },
   },
   plugins: [],

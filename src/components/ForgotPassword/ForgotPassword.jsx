@@ -21,25 +21,30 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-center'>
-      <div className='w-[533px] h-[200px] p-8 pb-8 pr-6 gap-8 rounded-lg border border-gray-400 flex flex-col'>
-        <h1 className='font-Inter font-bold text-2xl leading-10 items-center text-[#2d2d2d] mx-auto'>Forgot Password</h1>
+    <div className='w-full h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8'>
+      <div className='w-full max-w-lg sm:max-w-md p-6 sm:p-8 gap-6 sm:gap-8 rounded-lg border border-gray-400 flex flex-col'>
+        <h1 className='font-Inter font-bold text-xl sm:text-2xl leading-8 sm:leading-10 text-[#2d2d2d] mx-auto'>Forgot Password</h1>
 
-        <form onSubmit={handleForgotPasswordSubmit}>
-          <div className='flex flex-col w-[485px] h-[74px] gap-[4px]'>
-            <label className='font-Inter font-medium text-sm leading-5 text-[#4e4e4e]' htmlFor="email">Email</label>
+        <form onSubmit={handleForgotPasswordSubmit} className='w-full'>
+          <div className='flex flex-col w-full gap-1 sm:gap-2'>
+            <label 
+              className='font-Inter font-medium text-sm sm:text-base leading-5 sm:leading-6 text-[#4e4e4e]' 
+              htmlFor="email-input">
+              Email
+            </label>
             <input
-              className='w-[485px] h-[48px] rounded border-2 p-2 gap-[10px] text-[#868686] outline-none'
+              id="email-input"
+              className='w-full h-[40px] sm:h-[48px] rounded border-2 p-2 text-[#868686] outline-none'
               type="text"
               placeholder='Enter e-mail address'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {error && <span className='text-red-500 text-sm'>{error}</span>}
+            {error && <span className='text-red-500 text-xs sm:text-sm'>{error}</span>}
           </div>
 
-          <div className='flex justify-center items-center mx-auto mt-9'>
-            <button className='w-[485px] h-[48px] rounded-lg border p-2 gap-[10px] bg-[#3b54fa] text-white'>Submit</button>
+          <div className='flex justify-center items-center mt-6 sm:mt-9'>
+            <button className='w-full h-[40px] sm:h-[48px] rounded-lg border p-2 bg-[#3b54fa] text-white text-sm sm:text-base'>Submit</button>
           </div>
         </form>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from "../../assets/logo.png";
+import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineUp, AiOutlineDown, AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-full px-4 sm:px-16 border-b-2 flex justify-between items-center bg-white">
+    <nav className="sticky top-0 z-50 py-3 w-full h-full px-4 sm:px-16 border-b-2 flex justify-between items-center bg-white">
       <div className="flex items-center">
         <img src={Logo} alt="E-medatt logo" className="w-[40px] h-[40px] m-0 p-0" />
         <h1 className="font-[Inter] text-base sm:text-3xl font-bold leading-36 text-[#3B54FA] mr-4 m-0 p-0 whitespace-nowrap">
@@ -108,8 +109,8 @@ const Navbar = () => {
           </div>
 
           <div className='md:block hidden w-[187px] h-[40px] gap-[16px] lg:flex justify-center items-center'>
-            <button className='w-[79px] h-[40px] rounded-lg border gap-[8px] text-[#3b54fa] bg-[#ffffff] px-4 py-2 text-nowrap cursor-pointer'>Log in</button>
-            <button className='w-[92px] h-[40px] rounded-lg border gap-[8px] bg-[#3b54fa] text-[#ffffff] px-4 py-2 cursor-pointer text-nowrap'>Sign Up</button>
+            <Link to="/Login" className='w-[79px] h-[40px] rounded-lg border gap-[8px] text-[#3b54fa] bg-[#ffffff] px-4 py-2 text-nowrap cursor-pointer'>Log in</Link>
+            <Link to="/Signup" className='w-[92px] h-[40px] rounded-lg border gap-[8px] bg-[#3b54fa] text-[#ffffff] px-4 py-2 cursor-pointer text-nowrap'>Sign Up</Link>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@ const Navbar = () => {
         {nav ? <AiOutlineClose size={30} className='text-black' /> : <AiOutlineMenu size={30} className='text-black' />}
       </div>
 
-      <div className={nav ? 'w-full h-full bg-white/70 backdrop-blur-lg gap-[32px] text-black absolute top-[41px] left-0 flex flex-col items-center text-center transition-all duration-500 ease-in-out' : 'absolute left-[-100%]'}>
+      <div className={nav ? 'fixed right-0 z-20 w-full h-full bg-white/70 backdrop-blur-lg gap-[32px] text-black top-[65px] left-0 flex flex-col items-center text-center transition-all duration-500 ease-in-out' : 'absolute left-[-100%]'}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center w-full">
           <div className="relative my-2">
             <button
@@ -128,7 +129,7 @@ const Navbar = () => {
               className="inline-flex items-center px-3 py-2 text-[#4e4e4e] font-bold text-sm"
             >
               Services
-              {isServicesOpen ? <AiOutlineUp className="ml-2" /> : <AiOutlineDown className="ml-2" />}
+              {isServicesOpen ? <AiOutlineUp className="ml-2 mt-1"  /> : <AiOutlineDown className="ml-2 mt-1" />}
             </button>
             {isServicesOpen && (
               <div className="mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition ease-in-out duration-300">
@@ -148,7 +149,7 @@ const Navbar = () => {
               className="inline-flex items-center px-3 py-2 text-[#4e4e4e] font-bold text-sm"
             >
               Nutrition
-              {isNutritionOpen ? <AiOutlineUp className="ml-2" /> : <AiOutlineDown className="ml-2" />}
+              {isNutritionOpen ? <AiOutlineUp className="ml-2 mt-1" /> : <AiOutlineDown className="ml-2 mt-1" />}
             </button>
             {isNutritionOpen && (
               <div className="mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition ease-in-out duration-300">
@@ -170,7 +171,7 @@ const Navbar = () => {
               className="inline-flex items-center px-3 py-2 text-[#4e4e4e] font-bold text-sm"
             >
               Articles
-              {isArticlesOpen ? <AiOutlineUp className="ml-2" /> : <AiOutlineDown className="ml-2" />}
+              {isArticlesOpen ? <AiOutlineUp className="ml-2 mt-1" /> : <AiOutlineDown className="ml-2 mt-1" />}
             </button>
             {isArticlesOpen && (
               <div className="mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition ease-in-out duration-300">
@@ -198,8 +199,8 @@ const Navbar = () => {
           </div>
 
           <div className='flex flex-col w-[187px] h-[40px] gap-[16px] items-center my-2 '>
-            <button className='w-[79px] h-[40px] rounded-lg border gap-[8px] text-[#3b54fa] bg-[#ffffff] px-4 py-2 cursor-pointer whitespace-nowrap mt-1'>Log in</button>
-            <button className='w-[92px] h-[40px] rounded-lg border-none gap-[8px] bg-[#3b54fa] text-[#ffffff] px-4 py-2 cursor-pointer whitespace-nowrap'>Sign Up</button>
+            <Link to="/Login" className='w-[79px] h-[40px] rounded-lg border gap-[8px] text-[#3b54fa] bg-[#ffffff] px-4 py-2 cursor-pointer whitespace-nowrap mt-1'>Log in</Link>
+            <Link to="/Signup" className='w-[92px] h-[40px] rounded-lg border-none gap-[8px] bg-[#3b54fa] text-[#ffffff] px-4 py-2 cursor-pointer whitespace-nowrap'>Sign Up</Link>
           </div>
         </div>
       </div>

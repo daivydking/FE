@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import PhHeartbeat from '../../assets/ph_heartbeat-duotone.png';
 import Frame86 from '../../assets/Frame 86.png';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaApple } from 'react-icons/fa';
+import GoogleLogo from '../../assets/Tech Logos/Google.jpg';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -44,7 +46,7 @@ const Login = () => {
         <h1 className='font-Inter text-2xl font-bold leading-8 text-[#3b54fa]'>E-MEDATT</h1>
       </div>
 
-      <div className=' w-full h-full flex flex-col lg:flex-row justify-center items-center mt-[-2rem]'>
+      <div className=' w-full h-full flex flex-col lg:flex-row justify-center items-center mt-[-6rem]'>
       <h1 className='lg:hidden font-Inter font-bold text-xl sm:text-2xl md:text-2xl leading-8 sm:leading-10 md:leading-10 items-center text-[#2d2d2d] mx-auto'>Log in</h1>
       <div className='flex justify-center lg:block'>
     <img className='sm:w-[250px] sm:h-[200px] md:w-[312px] md:h-[240px] lg:w-[600px] lg:h-[440px]' src={Frame86} alt="female doctor" />
@@ -81,24 +83,37 @@ const Login = () => {
       </div>
 
       <div className='flex justify-end'>
-        <a className='font-Inter font-medium text-sm leading-5 text-[#4e4e4e]' href="ForgotPassword" target='_blank'>Forgot password</a>
+        <Link to="/ForgotPassword" className='font-Inter font-medium text-sm leading-5 text-[#4e4e4e]'>Forgot password</Link>
       </div>
 
       <div className='flex justify-center items-center mx-auto mt-6 sm:mt-7 md:mt-9'>
-        <button className=' sm:w-[312px] md:w-[312px] lg:w-[485px] h-[40px] sm:h-[44px] md:h-[48px] rounded-lg border p-2 gap-[10px] bg-[#3b54fa] text-white'>Log in</button>
+      <button className='w-full sm:w-[312px] md:w-[360px] lg:w-[485px] h-[48px] sm:h-[48px] md:h-[52px] lg:h-[56px] rounded-lg border p-2 gap-[10px] bg-[#3b54fa] text-white'>
+      Log in
+    </button>
+
       </div>
 
       <div className='w-[314px] h-[24px] flex justify-center items-center mx-auto mt-2 sm:mt-2 md:mt-3'>
         <p className='font-Inter font-normal text-base leading-6 text-[#4e4e4e]'>Don't have an account yet? <a className='font-Inter font-medium text-base leading-6 text-[#5754ec] underline' href="Signup" target='_blank'>Sign up here!</a></p>
       </div>
     </form>
+
+    <div className='w-full max-w-md gap-4 flex flex-col items-center mt-8'>
+    <button className='w-full sm:w-[312px] md:w-[360px] lg:w-[485px] h-[44px] sm:h-[48px] md:h-[52px] lg:h-[56px] flex items-center justify-center gap-4 py-2 px-4 rounded-lg bg-white text-black text-base sm:text-sm font-normal leading-6 [letter-spacing:-0.02em] border-2'>
+        <img className='w-[27px]' src={GoogleLogo} alt="google logo" /> Login with Google
+      </button>
+
+      <button className='w-full sm:w-[312px] md:w-[360px] lg:w-[485px] h-[44px] sm:h-[48px] md:h-[52px] lg:h-[56px] flex items-center justify-center gap-4 py-2 px-4 rounded-lg bg-white text-black text-base sm:text-sm font-normal leading-6 [letter-spacing:-0.02em] border-2'>
+        <FaApple style={{ fontSize: '20px' }} /> Login with Apple
+      </button>
+    </div>
   </div>
 
 
 </div>
 
 
-      <div className='hidden w-[1200px] h-[19px] gap-[384px] lg:flex justify-center items-center'>
+      <div className='hidden w-[1200px] h-[19px] gap-[384px] lg:flex justify-center items-center mt-8'>
         <div className='w-[159px] h-[19px]'>
           <p className='font-Inter text-[#141522] text-xs leading-[14.52px] tracking-[-1%] text-nowrap'>Copyright © Emedatt 2024</p>
         </div>
