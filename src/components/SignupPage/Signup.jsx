@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 
-const SignUp = () => {
+const Signup = () => {
   const navigate = useNavigate(); // Initialize useNavigate
   const [isPatient, setIsPatient] = useState(true);
   const [isPractitioner, setIsPractitioner] = useState(false);
@@ -57,7 +57,7 @@ const SignUp = () => {
       <div className="flex w-full justify-start mb-8 pl-8 mt-[-14px]">
       <Link to="/" className='flex justify-between items-center'>
         <img src={PhHeartbeat} alt="E-MEDATT Logo" className="w-[35px] h-[35px] mt-[-0.2rem]" />
-        <h1 className="font-inter text-2xl font-bold leading-8 text-[#3b54fa] mr-[4rem]">E-MEDATT</h1>
+        <h1 className="font-inter text-2xl font-bold leading-8 text-[#3b54fa] mr-[rem]">E-MEDATT</h1>
         </Link>
        
       </div>
@@ -282,4 +282,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;
