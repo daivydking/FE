@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleForgotPasswordSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +19,11 @@ const ForgotPassword = () => {
       setError('');
       console.log('Forgot Password form is valid');
       // Perform forgot password logic here
+
+      // Simulate successful forgot password process and navigate to login page
+      setTimeout(() => {
+        navigate('/Login');
+      }, 1000); // Simulate network delay
     }
   };
 

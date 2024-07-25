@@ -45,5 +45,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For more information, please contact the authors:
 
-- **Usiwo Sonia**: [usiwosonia@gmail.com](mailto:usiwosonia@gmail.com)
-- **David Chukwu**: [radchibuike@gmail.com](mailto:radchibuike@gmail.com)
+- **Usiwo Sonia Uyouyou**: [usiwosonia@gmail.com](mailto:usiwosonia@gmail.com)
+- **David Chimezie Chuku**: [radchibuike@gmail.com](mailto:radchibuike@gmail.com)
