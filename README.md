@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 ![E-Medatt Full Design](./src/assets/Landing%20page.png)
 
-[Live URL](link-to-your-live-site)
+[Live URL](https://emedatt-telehealth.vercel.app/)
 
 ## Overview
 
